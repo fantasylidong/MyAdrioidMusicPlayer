@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.lidongspace.www.mymusicplayer.MainActivity">
+
+
+    <EditText
+        android:id="@+id/serachsong"
+        android:layout_width="234dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="请输入要搜索的歌曲"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/serachaction"
+        android:layout_width="51dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="false"
+        android:background="@android:color/holo_blue_light"
+        android:onClick="searchsong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/serachsong"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_action_search" />
+
+    <ImageButton
+        android:id="@+id/playhistory"
+        android:layout_width="71dp"
+        android:layout_height="66dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/holo_red_light"
+        android:onClick="Onplayhistory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serachsong"
+        app:srcCompat="@mipmap/ic_history" />
+
+    <ImageButton
+        android:id="@+id/localsong"
+        android:layout_width="66dp"
+        android:layout_height="67dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/holo_red_light"
+        android:onClick="localsong"
+        app:layout_constraintEnd_toStartOf="@+id/playhistory"
+        app:layout_constraintTop_toBottomOf="@+id/serachsong"
+        app:srcCompat="@mipmap/btn_playback_play" />
+
+    <TextView
+        android:id="@+id/songlocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="本地歌曲"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/localsong" />
+
+    <TextView
+        android:id="@+id/playedhistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="播放历史"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playhistory" />
+
+    <ImageButton
+        android:id="@+id/setting"
+        android:layout_width="39dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/white"
+        android:onClick="setting"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_more_vert_black_24dp" />
+</android.support.constraint.ConstraintLayout>
